@@ -3,6 +3,10 @@ module Helper exposing (..)
 import Html exposing (Html, div, h1, li, text, ul)
 
 
+
+-- ARITHMETIC FUNCTIONS
+
+
 add2 : Int -> Int -> Int
 add2 x y =
     x + y
@@ -16,6 +20,10 @@ add3 x y z =
 calc : Int -> Int -> (Int -> Int -> Int) -> Int
 calc x y op =
     op x y
+
+
+
+-- RECORD TYPES AND LIST PROCESSING
 
 
 type alias Language =
@@ -61,6 +69,10 @@ type alias Videogame =
 getVideogameGenres : List Videogame -> List (List String)
 getVideogameGenres games =
     List.map .genres games
+
+
+
+-- HTML GENERATION
 
 
 type alias Laptop =
