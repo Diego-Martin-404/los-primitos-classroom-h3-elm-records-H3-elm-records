@@ -22,10 +22,6 @@ calc x y op =
     op x y
 
 
-
--- RECORD TYPES AND LIST PROCESSING
-
-
 type alias Language =
     { name : String
     , releaseYear : Int
@@ -69,10 +65,6 @@ type alias Videogame =
 getVideogameGenres : List Videogame -> List (List String)
 getVideogameGenres games =
     List.map .genres games
-
-
-
--- HTML GENERATION
 
 
 type alias Laptop =
