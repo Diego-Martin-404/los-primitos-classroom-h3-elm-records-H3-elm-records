@@ -3,10 +3,6 @@ module Helper exposing (..)
 import Html exposing (Html, div, h1, li, text, ul)
 
 
-
--- ARITHMETIC FUNCTIONS
-
-
 add2 : Int -> Int -> Int
 add2 x y =
     x + y
@@ -42,13 +38,13 @@ type alias User =
 
 onlyStudents : List User -> List String
 onlyStudents users =
-    List.filterMap
+    List.map
         (\u ->
             if u.uType == "Student" then
-                Just u.name
+                u.name
 
             else
-                Nothing
+                ""
         )
         users
 
