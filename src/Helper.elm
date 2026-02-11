@@ -46,13 +46,13 @@ type alias User =
 
 onlyStudents : List User -> List String
 onlyStudents users =
-    List.map
+    List.filterMap
         (\u ->
             if u.uType == "Student" then
-                u.name
+                Just u.name
 
             else
-                ""
+                Nothing
         )
         users
 
